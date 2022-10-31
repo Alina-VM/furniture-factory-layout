@@ -1,0 +1,237 @@
+@import 'null.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Inter';
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.row {
+    display: flex;
+}
+.header {
+    padding-top: 56px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__main-menu {
+        display: flex;
+        flex-direction: column;
+        width: 803px;
+        margin-right: 180px;
+    }
+
+    &__nav {
+        margin-bottom: 54px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav-item {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #AFAFAF;
+        width: 205px;
+        letter-spacing: 2px;
+    }
+    &__favorites-icon {
+        position: relative;
+           sup {
+            position: absolute;
+            top: -11px;
+            color:#AFAFAF;
+           } 
+    }
+
+    &__cart-icon {
+        position: relative;
+        sup {
+            position: absolute;
+            top: -11px;
+            color:#FF0000;
+           } 
+    }
+    &__contacts-block {
+        justify-content: space-between;
+        align-items: top;
+    }
+
+    &__contacts {
+        margin-right: 30px;
+    }
+
+    &__phone {
+        padding-bottom: 20px;
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 16px;
+        color: #6D6D6D;
+        
+    }
+
+    &__adress {
+        font-family: 'Roboto';
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 17px;
+    }
+
+    &__insta {
+        width: 23.52px;
+        height: 23px;
+        margin-top: 10px;
+    }
+}
+
+.content {
+}
+.top-slider {
+    background: url('../img/topbg.png') no-repeat center;
+    padding-bottom: 120px;
+    
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        position:relative;
+        margin-bottom: 348px;
+       
+    }
+    &__white-space {
+        width: 978px;
+        margin-left: -80px;
+        background-color: #ffff;
+    }
+    &__search {
+        display: flex;
+        justify-content: space-between;
+        width: 365px;
+        padding: 15px;
+        background-color: #E1E1E1;
+        opacity: 0.8;
+    }
+
+    &__catalog {
+        display: flex;
+        justify-content: center;
+        background-color: #FF0000;
+        width: 302px;
+        height: 70px;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        top: 58px;
+    }
+
+    &__proposal-block {}
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #ffff;
+        margin-bottom: 19px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 55px;
+    }
+
+    &__scroll {
+        display: flex;
+        &__line {
+            background-color: #FF0000;
+            width: 40px;
+            height: 6px;
+            margin-right: 20px;
+
+        }
+    }
+}
+
+.search {
+
+    &_text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #707070;
+    }
+
+    &__icon {
+        width: 21px;
+        height: 21px;
+    }
+    &__frame {
+        border: #ffff solid  20px;
+        margin-right: -20px;
+        margin-top: -10px;
+    }
+}
+.catalog {
+    
+    &__text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffff;
+        text-transform: uppercase;
+        margin-right: 28px;
+    }
+    &__icon { 
+        width: 15px;
+        height: 15px;
+    }
+}
+.proposal-block {
+
+    &__name {
+        font-weight: 700;
+        font-size: 100px;
+        line-height: 83px;
+        color: #dfddda;
+        text-transform: uppercase;
+        padding-right: 40px;
+    }
+
+    &__text {
+        color: #dfddda;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 26px;
+        padding-right: 40px;
+
+    }
+
+    &__button {     
+    }
+}
