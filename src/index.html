@@ -2,17 +2,77 @@
 <html lang="ua">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width>
+        <meta name="viewport" content="width=device-width">
         <title>main page</title>
+        <link rel="stylesheet" href="css/common.css">
     </head>
     <body>
         <div class="wrapper">
             <header class="header">
-                <div class="container">
-                    <div class="row header__top-menu"></div>
-                    <div class="row header__bottom-menu"></div>
+                <div class="container header__container">
+                    <div class="header__main-menu">
+                        <ul class="header__nav row">
+                            <li class="header__nav-item">ПОСЛУГИ</li>
+                            <li class="header__nav-item">ОПЛАТА ТА ДОСТАВКА</li>
+                            <li class="header__nav-item">АКЦІЇ</li>
+                            <li class="header__nav-item">КОРИСНІ ПОРАДИ</li>
+                            <li class="header__nav-item">ЗВОРОТНІЙ ЗВ'ЯЗОК</li>
+                            <li class="header__nav-item">КОНТАКТИ</li>
+                        </ul>
+                       <div class="header__info row">
+                        <img src="img/LOGO-main.svg" alt="" class="logo">
+                        <div class="header__text">керамічна плитка та керамограніт у Києві</div>
+                        <img src="img/user.svg" alt="" class="header__login-icon">
+                        <div class="header__favorites-icon"><img src="img/favorites.svg" alt=""><sup>0</sup></div>
+                        <div class="header__cart-icon"><img src="img/shopping-cart.svg" alt=""><sup>21</sup></div>
+                       </div>
+                    </div>
+                    <div class="header__contacts-block row">
+                        <div class="header__contacts">
+                            <div class="header__phone"> <img src="img/phone-call.svg"> (088) 88-88-88</div>
+                            <div class="header__adress">м.Київ вул. Старокозацька, 41/3</div>
+                        </div>
+                        <img src="img/insta.svg" class="header__insta">
+                    </div>
                 </div>
             </header>
+            <main class="content">
+                <section class="top-slider">
+                    <div class="container">
+                        <!-- <img src="img/dotes.png" class="top-slider__decoration"> -->
+                        <div class="top-slider__menu">
+                            <div class="top-slider__white-space">
+                                
+                            </div>
+                            <div class="top-slider__catalog">
+                                <div class="catalog__text">каталог продукції</div>
+                                <img class="catalog__icon" src="img/burger.svg" alt="">
+                             </div>
+                            <div class="search__frame">
+                                <div class="top-slider__search">
+                                <span class="search_text">шукати в каталозі</span>
+                                <img src="img/arrow.svg" alt="" class="search__icon">
+                                </div> 
+                            </div>
+                                 
+                        </div>
+                        <div class="top-slider__proposal-block">
+                            <div class="top-slider__subtitle">колекція 2020 року</div>
+                            <div class="top-slider__title">
+                                <span class="proposal-block__name">Casabella</span>
+                                <span class="proposal-block__text">знижка 20% до 25 серпня</span>
+                                <img class="proposal-block__button" src="img/redarr.svg" alt="">
+                            </div>
+                            <div class="top-slider__scroll">
+                                <div class="top-slider__scroll__line"></div>
+                                <div class="top-slider__scroll__line"></div>
+                                <div class="top-slider__scroll__line"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
     </body>
 </html>
