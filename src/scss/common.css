@@ -8,8 +8,6 @@
 }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -123,25 +121,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   line-height: 16px;
 }
-@media screen and (max-width: 1024px) {
-  .header__nav-item {
-    font-size: 12px;
-  }
-}
 .header__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-@media screen and (max-width: 1024px) {
-  .header__info .logo {
-    width: 180px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .header__info {
-    justify-content: space-around;
-  }
 }
 .header__text {
   font-family: "Roboto";
@@ -182,11 +165,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 16px;
   color: #6D6D6D;
-}
-@media screen and (max-width: 1024px) {
-  .header__phone {
-    font-size: 16px;
-  }
 }
 .header__adress {
   font-family: "Roboto";
@@ -556,6 +534,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .brands-catalog {
   margin-bottom: 154px;
+  position: relative;
 }
 .brands-catalog__title {
   font-weight: 700;
@@ -566,7 +545,6 @@ h1, h2, h3, h4, h5, h6 {
 .brands-catalog__wrapper {
   display: flex;
   height: 240px;
-  position: relative;
 }
 .brands-catalog__block {
   z-index: 1000;
@@ -593,7 +571,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 240px;
   background-color: #EEEEEE;
   position: absolute;
-  left: 315px;
+  top: 31px;
+  left: 78px;
   display: flex;
 }
 
@@ -737,7 +716,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 30px;
   font-size: 25px;
   font-weight: 700;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   color: #6F6F6F;
   line-height: 36px;
   flex-grow: 1;
@@ -987,35 +967,6 @@ h1, h2, h3, h4, h5, h6 {
 .reviews__wrapper {
   background: linear-gradient(#EEEEEE, white);
   padding-top: 112px;
-  padding-bottom: 112px;
-}
-.reviews__item {
-  width: 33.3333333333%;
-  flex-direction: column;
-}
-.reviews__item1 {
-  margin-right: 6%;
-}
-.reviews__user-data {
-  margin-bottom: 35px;
-}
-.reviews__text-block {
-  flex-grow: 1;
-}
-.reviews__text-block img {
-  margin-right: 15px;
-  width: 11.62px;
-  height: 9.41px;
-}
-.reviews__source {
-  padding-left: 26px;
-  font-weight: 300;
-  font-size: 14px;
-  align-items: center;
-  color: #A3A3A3;
-}
-.reviews__item2 {
-  margin-right: 6%;
 }
 .title-block__title {
   font-weight: 700;
@@ -1035,197 +986,4 @@ h1, h2, h3, h4, h5, h6 {
 }
 .title-block__item span {
   color: grey;
-}
-
-.user-data__info {
-  flex-direction: column;
-  justify-content: space-between;
-}
-.user-data__photo {
-  margin-right: 40px;
-}
-.user-data__name {
-  font-weight: 500;
-  font-size: 22px;
-}
-.user-data__date {
-  color: #A3A3A3;
-  font-size: 10px;
-  font-weight: 700;
-}
-.text-block__text p {
-  margin-bottom: 10px;
-}
-
-.map__container {
-  justify-content: space-between;
-}
-.map__wrapper {
-  background-image: url(../img/map/image\ 34.jpg);
-  padding-top: 117px;
-  padding-bottom: 154px;
-}
-.map__contacts-block {
-  background-color: white;
-  padding-top: 75px;
-  padding-left: 80px;
-  width: 480px;
-  height: 477px;
-  box-shadow: 2px 3px 4px grey;
-}
-.map__point {
-  margin-top: 50px;
-  background-color: white;
-  box-shadow: 2px 3px 4px grey;
-  width: 336px;
-  height: 60px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-.map__point img {
-  margin-right: 15px;
-}
-
-.contacts-block__title {
-  line-height: 30px;
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 26px;
-}
-.contacts-block__adress {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 30px;
-}
-.contacts-block__schedule {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 30px;
-  margin-bottom: 20px;
-}
-.contacts-block__phone {
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-  margin-bottom: 10px;
-}
-.contacts-block__phone img {
-  margin-right: 16px;
-}
-.contacts-block__email {
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 34px;
-}
-.contacts-block__email img {
-  margin-right: 16px;
-}
-.contacts-block__button {
-  color: red;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 14px;
-  width: 213px;
-  height: 65px;
-  background-color: white;
-  border: solid red 1px;
-}
-
-.footer__row {
-  justify-content: space-between;
-}
-.footer__logo-block {
-  flex-direction: column;
-  margin-top: -24px;
-}
-.footer__logo {
-  margin-bottom: 21px;
-  width: 282px;
-}
-.footer__catalog {
-  display: flex;
-  justify-content: center;
-  background-color: #FF0000;
-  width: 282px;
-  height: 65px;
-  align-items: center;
-  color: white;
-  margin-bottom: 75px;
-}
-.footer__catalog span {
-  margin-right: 10px;
-  color: white;
-  font-weight: 700;
-  font-size: 14px;
-}
-.footer__text {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  color: #AFAFAF;
-  letter-spacing: 2px;
-  margin-bottom: 43px;
-}
-.footer__insta img {
-  margin-right: 18px;
-}
-.footer__insta span {
-  font-weight: 300;
-  font-size: 22px;
-  text-transform: uppercase;
-  line-height: 26px;
-}
-.footer__upbutton {
-  width: 240px;
-  height: 65px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #A3A3A3;
-  background-color: #EBEBEB;
-  align-items: center;
-  justify-content: center;
-}
-.footer__upbutton span {
-  margin-right: 15px;
-}
-
-.footer-menu {
-  padding-top: 77px;
-}
-.footer-menu__title {
-  font-weight: 700;
-  font-size: 13px;
-  color: #777777;
-  letter-spacing: 2px;
-  margin-bottom: 24px;
-}
-.footer-menu__item {
-  font-weight: 400;
-  font-size: 14px;
-  color: #777777;
-  line-height: 21px;
-  margin-bottom: 9px;
-}
-
-.footer-contacts {
-  padding-top: 75px;
-}
-.footer-contacts__phone {
-  font-weight: 300;
-  font-size: 24px;
-  color: #6D6D6D;
-  margin-bottom: 43px;
-}
-.footer-contacts__pay {
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 83px;
-}
-
-/*# sourceMappingURL=common.css.map */
+}/*# sourceMappingURL=common.css.map */
