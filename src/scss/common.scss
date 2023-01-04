@@ -15,6 +15,11 @@
     font-size: 10px;
     font-weight: 700;
 }
+@mixin letters700-22 {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 @mixin to-1024 {
     @media  screen and (max-width: 1024px) {
         @content
@@ -199,22 +204,21 @@
         margin-bottom: 55px;
     }
 
-    &__scroll {
-        display: flex;
-        
-        &__line {
-            background-color: #FFff;
-            width: 40px;
-            height: 6px;
-            margin-right: 20px;
-            &:first-child {
-                background-color: #FF0000;
-            }
-
+    
+}
+.red-scroll {
+    display: flex;
+    &__line {
+        background-color: rgb(209, 203, 203);
+        width: 40px;
+        height: 6px;
+        margin-right: 20px;
+        &:first-child {
+            background-color: #FF0000;
         }
+
     }
 }
-
 .search {
 
     &_text {
@@ -270,6 +274,9 @@
 }
 
 .collections {
+    @include to-1024() {
+        display: none;
+    }
     margin-bottom: 128px;
         &__container {
             display: flex;
@@ -445,14 +452,69 @@
             }
         }
 }
+.collections-mob {
+    display: none;
+    margin-top: 48px;
+    @include to-1024(){
+        display: block;
+    }
+    &__item {
+        margin-bottom: 23px;
+        &:last-child {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title {
+        @include letters700-22();
+        margin-bottom: 7px;
+    }
+
+    &__subtitle {
+        font-size: 9px;
+        text-transform: uppercase;
+        color: #C5C5C5;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    &__addblock {}
+}
+
+.addblock {
+
+    &__title {
+        font-weight: 400;
+        font-size: 12px;
+        color: red;
+        margin-bottom: 10px;
+    }
+
+    &__item {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 55px;
+        }
+    }
+}
+
 .advantages {
     margin-bottom: 115px;
+    @include to-1024(){
+        margin-bottom: 70px;
+    } 
     &__item {
         display: flex;
         margin-right: 65px;
     }
     &__icon {
         margin-right: 35px;
+        @include to-1024() {
+            margin-right: 13px;
+        }
     }
     &__item-text {}
 
@@ -469,16 +531,32 @@
 .news-slider {
     margin-bottom: 129px;
     justify-content: space-between;
-    display: flex;
+    @include to-1024(){
+        margin-bottom: 90px;
+    } 
+    &__scroll {
+        display: none;
+        @include to-1024(){
+            display: flex;
+            margin-top: 26px;
+            justify-content: center;
+        }
+    }
     &__leftarrow {
         margin-left: -37px;
         margin-right: 21px;
+        @include to-1024() {
+            display: none;
+        }
 
     }
     &__rightarrow {
         margin-right: -37px;
         margin-left: 21px;
         transform: rotate(180deg);
+        @include to-1024() {
+            display: none;
+        }
     }
 }
 .slider-item {
@@ -526,6 +604,9 @@
 
 .brands-catalog {
     margin-bottom: 154px;
+    @include to-1024(){
+        margin-bottom: 55px;
+    }  
     
     &__title {
         font-weight: 700;
@@ -568,7 +649,10 @@
     background-color: #EEEEEE;
     position: absolute;   
     left: 315px;
-    display: flex;       
+    display: flex;     
+    @include to-1024(){
+        left: 13px;
+    }  
 }
 .brand1 {
     width: 157px;
@@ -588,6 +672,9 @@
 }
 .newincatalog {
     margin-bottom: 166px;
+    @include to-1024(){
+        margin-bottom: 100px;
+    } 
     &__header {
         justify-content: space-between;
         align-items: center;
@@ -662,29 +749,48 @@
     }
 }
 .popular {
-    margin-bottom: 157px;    
+    margin-bottom: 157px; 
+    @include to-1024(){
+        margin-bottom: 85px; 
+    }    
     &__cards {
         justify-content: space-between;
         flex-wrap: wrap;
+        @include to-1024(){
+            justify-content: space-around;
+        } 
     }
     &__card {
         border: 1px solid #E9E9E9;
-        padding-top: 7px;        
+        padding-top: 7px;   
+        @include to-1024(){
+            justify-content: space-around;
+            margin-top: 25px;
+        } 
     }
     &__arrright {
         margin-right: -37px;
         margin-left: 21px;
         transform: rotate(180deg);
+        @include to-1024(){
+            display: none;
+        } 
     }
     &__arrleft {
         margin-left: -37px;
         margin-right: 21px;
+        @include to-1024(){
+            display: none;
+        }
     }
 }
 .popular-menu {
     position: relative;
     border-bottom: #E9E9E9 1px solid;
     margin-bottom: 89px;
+    @include to-1024(){
+        margin-bottom: 64px;
+    } 
     &__item {}
     &__square {
         width: 13px;
@@ -790,6 +896,9 @@
 
 .our-services {
     margin-bottom: 147px;
+    @include to-1024(){
+        margin-bottom: 85px; 
+    }  
     &__title {
         @include letters700-25(30px);
         border-bottom: #E9E9E9 1px solid;
@@ -853,6 +962,9 @@
 
 .realized {
     margin-bottom: 144px;
+    @include to-1024(){
+        margin-bottom: 205px;
+    } 
 
     &__header {
         justify-content: space-between;
@@ -873,6 +985,8 @@
     }
 
     &__item {
+        width: 400px;
+        height: 222px;
         
     }
 
@@ -880,6 +994,7 @@
         background-image: url(../img/realised/first.jpg);
         width: 400px;
         height: 222px;
+        
     }
 
     &__subname {
@@ -890,6 +1005,9 @@
         padding-left: 55px;
         padding-right: 20px;
         margin-bottom: 17px;
+        @include to-1024(){
+            padding-left: 12px;
+        }  
     }
 
     &__name {
@@ -897,6 +1015,10 @@
         padding-right: 20px;
         @include letters700-25(26px);
         color: #FFFFFF;
+        @include to-1024(){
+            padding-left: 12px;
+            padding-right: 45px;
+        } 
     }
     &__item2 {
         background-image: url(../img/realised/second.jpg);
@@ -927,7 +1049,10 @@
 .item {
     
     &__picture {
-        margin-bottom: 18px;        
+        margin-bottom: 18px;   
+        @include to-1024(){
+            width: 325px;
+        }      
     }
     &__list {
         font-weight: 300;
@@ -945,6 +1070,9 @@
 .about-shop {
     margin-bottom: 166px;
     position: relative;
+    @include to-1024(){
+        margin-bottom: 90px; 
+    }  
     &__title {
         @include letters700-25(30px);
         border-bottom: #E9E9E9 1px solid;
@@ -996,6 +1124,9 @@
         background: linear-gradient(#EEEEEE, white);
         padding-top: 112px;
         padding-bottom: 112px;
+        @include to-1024(){
+            padding: 76px 0; 
+        }  
     }
 
     &__main-block {}
@@ -1045,6 +1176,9 @@
         line-height: 31px;
         color: #EEEEEE;
         margin-right: 100px;
+        @include to-1024(){
+            font-size: 26px;
+        }  
     }
 
     &__item {
@@ -1096,6 +1230,9 @@
         background-image: url(../img/map/image\ 34.jpg);
         padding-top: 117px;
         padding-bottom: 154px;
+        @include to-1024(){
+            padding: 80px 0 105px 0;
+        }  
     }
 
     &__contacts-block {
