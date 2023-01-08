@@ -36,15 +36,15 @@
 .wrapper {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .container {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 10px;
     @include to-480 {
-            max-width: 480px;
-            padding: 0 5px;
-           
+        max-width: 480px;
+        padding: 0 5px;        
     }
 }
 .row {
@@ -622,12 +622,12 @@
 }
 .collections-mob {
     display: none;
-    margin-top: 48px;
-    @include to-480 {
-        padding-left: 35px;
-    }
+    margin-top: 48px;   
     @include to-1024(){
         display: block;
+    }
+    @include to-480 {
+        padding-left: 35px;
     }
     &__item {
         margin-bottom: 23px;
@@ -686,6 +686,7 @@
         }
     }
     &__icon {
+        width: 55px;
         margin-right: 35px;
         @include to-1024() {
             margin-right: 13px;
@@ -716,13 +717,14 @@
     } 
     &__scroll {
         display: none;
-        @include to-480 {
-            margin-top: 0px;
-        }
-        @include to-1024(){
+        
+        @include to-1024{
             display: flex;
             margin-top: 26px;
             justify-content: center;
+        }
+        @include to-480 {
+            margin-top: 0px;
         }
     }
     &__leftarrow {
@@ -759,19 +761,25 @@
         height: 223px;
         margin-right: 44px;
         @include to-480 {
-            margin-right: 9px;
+            display: none;
         }
     }
     &__third {
         background-image: url(../img/newsslider/third.jpg);
         width: 400px;
         height: 223px;
+        @include to-480 {
+            display: none;
+        }
     }
     &__white-wrapper {
         @extend %white-wrapper;
         margin: 22px;
         width: 360px;
         height: 180px;
+        @include to-480 {
+            width: 100%;
+        }
     }
 
     &__newsdate {
@@ -793,13 +801,12 @@
 
 .brands-catalog {
     margin-bottom: 154px;
-    @include to-480 {
-        margin-bottom: 50px;
-    }
     @include to-1024(){
         margin-bottom: 55px;
     }  
-    
+    @include to-480 {
+        margin-bottom: 50px;
+    }
     &__title {
         font-weight: 700;
         font-size: 46px;
@@ -858,13 +865,13 @@
     background-color: #EEEEEE;
     position: absolute;   
     left: 315px;
-    display: flex;   
-    @include to-480 {
-        height: 192px;
-    }  
+    display: flex;       
     @include to-1024(){
         left: 13px;
     }  
+    @include to-480 {
+        height: 192px;
+    } 
 }
 .brand1 {
     width: 157px;
@@ -893,12 +900,14 @@
 }
 .newincatalog {
     margin-bottom: 166px;
-    @include to-480 {
-        margin-bottom: 40px;
-    }
+    
     @include to-1024(){
         margin-bottom: 100px;
     } 
+    @include to-480 {
+        margin-bottom: 40px;
+        
+    }
     &__header {
         justify-content: space-between;
         align-items: center;
@@ -946,7 +955,7 @@
         width: 760px;
         height: 520px;
         @include to-480 {
-            width: 342px;
+            width: 100%;
             height: 216px;
          }
     }
@@ -955,6 +964,7 @@
     &__item {
         @include to-480 {
            margin-bottom: 10px;
+           width: 100%;
         }
     }
     &__first {
@@ -964,12 +974,16 @@
         margin-bottom: 40px;
         @include to-480 {
             margin-bottom: 10px;
+            width: 100%;
          }
     }
     &__second {
         background-image: url('../img/mono.jpg');
         width: 480px;
         height: 240px;
+        @include to-480 {
+            width: 100%;
+         }
     }
 }
 .item {
@@ -1164,13 +1178,13 @@
 }
 
 .our-services {
-    @include to-480 {
-        display: none;
-    }
     margin-bottom: 147px;
     @include to-1024(){
         margin-bottom: 85px; 
     }  
+    @include to-480 {
+        display: none;
+    }
     &__title {
         @include letters700-25(30px);
         border-bottom: #E9E9E9 1px solid;
@@ -1234,7 +1248,6 @@
 .ourservices-mob {
     margin-left: 35px;
     margin-bottom: 70px;
-    // margin-right: 32px;
     display: none;
     @include to-480 {
         display: block;
@@ -1272,8 +1285,7 @@
 }
 
 .realized {
-    margin-bottom: 144px;
-    
+    margin-bottom: 144px;    
     @include to-1024(){
         margin-bottom: 205px;
     } 
@@ -1307,6 +1319,19 @@
     }
 
     &__item {
+        @include to-480 {
+            width: 100%;
+        }
+        &:nth-child(2) {
+            @include to-480 {
+                display: none;
+            }
+        }
+        &:nth-child(3) {
+            @include to-480 {
+                display: none;
+            }
+        }
     }
 
     &__item1 {
@@ -1348,6 +1373,9 @@
         background-image: url(../img/realised/third.jpg);
         width: 400px;
         height: 222px;
+        @include to-480 {
+            width: 100%;
+        }
     }
 }
 
@@ -1484,6 +1512,7 @@
         width: calc(100%/2 - 14px);
         height: 100%;
         margin-right: 14px;
+        object-fit: cover;
     }
 
     &__pictures {
@@ -1491,7 +1520,8 @@
         
         & img {
             display: block;
-            // width: 146px;
+            width: 100%;
+            object-fit: cover;
             height: calc(100%/2 - 7px);
             &:first-child {
                 margin-bottom: 15px;
@@ -1684,7 +1714,10 @@
         & img {
             margin-right: 15px;
         }
-        
+        @include to-480 {
+            box-shadow: 0px 0px 3px grey;
+            width: 100%;
+        }
     }
 }
 
@@ -1744,9 +1777,15 @@
     }
 }
 .footer {
-    
+    @include to-480 {
+        margin-left: 37px;
+        padding-right: 32px;
+    }
     &__row {
         justify-content: space-between;
+        @include to-480 {
+            flex-direction: column;
+        }
     }
     &__logo-block {
         flex-direction: column; 
@@ -1765,6 +1804,9 @@
         align-items: center;
         color: white;
         margin-bottom: 75px;
+        @include to-480 {
+            display: none;
+        }
        
         & span {
             margin-right: 10px;
@@ -1782,6 +1824,10 @@
         color: #AFAFAF;
         letter-spacing: 2px;
         margin-bottom: 43px;
+        @include to-480 {
+            letter-spacing: 1px;
+            margin-bottom: 32px;
+        }
     }
     &__insta {
         & img {
@@ -1815,6 +1861,9 @@
 
 .footer-menu {
     padding-top: 77px;
+    @include to-480 {
+        padding-top: 32px;
+    }
     &__title {
         font-weight: 700;
         font-size: 13px;
@@ -1842,6 +1891,9 @@
         font-size: 24px;
         color: #6D6D6D;
         margin-bottom: 43px;
+        @include to-480 {
+            display: none;
+        }
     }
 
     &__pay {
